@@ -1,0 +1,20 @@
+export class SpacexModel {
+    flight_number:number;
+    mission_name:string;
+    launch_landing:boolean;
+    launch_year:string;
+    launch_success:boolean;
+    land_success:boolean;
+    mission_id:Array<string>
+    rocket:Object;
+    constructor()
+    {
+        this.land_success=false;
+        this.flight_number=null;
+        this.mission_name='';
+   this.launch_landing=false;
+        this.launch_year=null;
+        this.launch_success=false;
+        this.mission_id=[];
+    }
+}
