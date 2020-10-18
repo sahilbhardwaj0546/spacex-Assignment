@@ -52,7 +52,7 @@ tab view => 768px to 1199px
 Desktop View =>1200px to 1439px
 Extra Large Desktop => Custom designed grid(col-xxl-2,col-xxl-8) for >=1400px 
 
-We can also design with above defined breakpoints in same manner as we defined breakpoints for col-xxl 
+We can also design Directed design with custom defined breakpoints in same manner as defined breakpoints for col-xxl 
 
 
 
