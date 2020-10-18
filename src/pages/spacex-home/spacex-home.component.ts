@@ -28,7 +28,6 @@ export class SpacexHomeComponent implements OnInit {
   }
   getSpacexRawData() {
     this.sharedService.getSpacexRawData().subscribe((dataArray: SpacexModel[]) => { this.spacexRawData = dataArray });
-
   }
   getLaunchYearData(year: string) {
     if (year != this.previousSelectedYear) {
