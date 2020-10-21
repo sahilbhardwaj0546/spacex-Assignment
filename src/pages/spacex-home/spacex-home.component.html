@@ -1,13 +1,13 @@
 <app-header></app-header>
 <div class="row no-margin">
-    <aside class="col-12 col-lg-2 col-md-5 no-padding">
+    <aside class="col-12 col-lg-2 col-md-4 no-padding">
         <div class="filters-container white-background">
             <div>
                 <h4 class="text-padding"><b>Filters</b></h4>
             </div>
             <div class="text-center">
                 <label>Launch Year</label></div>
-            <div class="text-underline text-center"></div>
+            <div class="text-underline lightgray-background text-center"></div>
             <div class="row no-margin ">
                 <ng-container *ngFor="let launchYear of launchYear">
                     <div class="col-2 col-md-1 no-padding"></div>
@@ -18,7 +18,7 @@
             </div>
             <div class="text-center">
                 <label>Successful Launch</label></div>
-            <div class="text-underline text-center"></div>
+            <div class="text-underline lightgray-background text-center"></div>
             <div class="row no-margin text-center">
                 <ng-container *ngFor="let indicator of successIndicator">
                     <div class="col-1 no-padding"></div>
@@ -29,7 +29,7 @@
             </div><div>
                 <div class="text-center">
                     <label>Successful Landing</label></div>
-                <div class="text-underline text-center"></div>
+                <div class="text-underline lightgray-background text-center"></div>
                 <div class="row no-margin text-center">
                     <ng-container *ngFor="let indicator of successIndicator">
                         <div class="col-1 no-padding"></div>
@@ -41,20 +41,20 @@
             </div>
         </div>
     </aside>
-    <div class="col-lg-10 col-12 col-md-7 no-padding">
+    <div class="col-lg-10 col-12 col-md-8 no-padding">
         <div class="row mission-container">
-            <ng-container *ngFor="let spacexData of spacexRawData">
+            <ng-container *ngIf="spacexRawData.length">
+            <ng-container *ngFor="let spacexData of spacexRawData" >
             <div class="col-xxl-2 no-padding"></div>
             <div class="col-lg-3 col-12 col-md-6 col-xxl-8 no-padding mission-container-child" [ngClass]="{
                 'no-padding': this.screenResolution<576 }">
-                <div class="white-background col-12 no-padding">
-                    <div>
-                        <div>
-                            <img src='../../assets/spaceximg.png' alt='spacexLogo' width="100%">
+                <div class="white-background col-12 boxing-element">
+                    <div class="lightgray-background">
+                        <div class="image-render-div">
+                            <img src='{{spacexData.links.mission_patch}}' alt='spacexLogo' width="100%">
                         </div>
-                       
                     </div>
-                    <div style="padding-left: .5rem;">
+                    <div >
                     <div>
                         <b><span class="white-background mission-name">{{spacexData.mission_name}}
                                 # {{spacexData.flight_number}}</span> </b></div>
@@ -74,13 +74,17 @@
                     </div>
                     <div>
                         <b><span>Successful Landing:
-                                {{spacexData.launch_landing}}</span> </b>
+                                {{spacexData.rocket.first_stage.cores[0].land_success}}</span> </b>
                     </div>
                 </div>
                 </div>
             </div>
             <div class="col-xxl-2 no-padding"></div>
         </ng-container>
+    </ng-container>
+        <ng-container *ngIf="!spacexRawData.length">
+<div><span>{{this.emptyApi}}</span></div>
+            </ng-container>
         </div>
     </div>
     </div>
