@@ -29,6 +29,7 @@ export interface FirstStage {
 export interface Cores {
     cores: Array<CoresData>;
 }
+
 export interface CoresData {
     land_success: boolean;
 }
