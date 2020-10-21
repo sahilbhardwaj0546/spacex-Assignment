@@ -32,3 +32,4 @@ export interface Cores {
 export interface CoresData {
     land_success: boolean;
 }
+
