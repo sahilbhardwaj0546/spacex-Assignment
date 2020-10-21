@@ -1,20 +1,34 @@
 export class SpacexModel {
-    flight_number:number;
-    mission_name:string;
-    launch_landing:boolean;
-    launch_year:string;
-    launch_success:boolean;
-    land_success:boolean;
-    mission_id:Array<string>
-    rocket:Object;
-    constructor()
-    {
-        this.land_success=false;
-        this.flight_number=null;
-        this.mission_name='';
-   this.launch_landing=false;
-        this.launch_year=null;
-        this.launch_success=false;
-        this.mission_id=[];
+    flightNumber: number;
+    missionName: string;
+    launchLanding: boolean;
+    launchYear: string;
+    launchSuccess: boolean;
+    landSuccess: boolean;
+    missionId: Array<string>;
+    links: LinkClassification;
+    rocket: FirstStage;
+    constructor() {
+        this.landSuccess = false;
+        this.flightNumber = null;
+        this.missionName = '';
+        this.launchLanding = false;
+        this.launchYear = null;
+        this.launchSuccess = false;
+        this.missionId = [];
+        this.links = { mission_patch: '', missionPatchSmall: '' };
     }
+}
+export interface LinkClassification {
+    mission_patch: string;
+    missionPatchSmall: string;
+}
+export interface FirstStage {
+    first_stage: Cores;
+}
+export interface Cores {
+    cores: Array<CoresData>;
+}
+export interface CoresData {
+    land_success: boolean;
 }

@@ -10,6 +10,10 @@
 {
     background-color: white;
 }
+.image-render-div
+{
+margin: 1rem 0;
+}
 .filters-container
 {
    margin: 1rem .5rem 0 .5rem;  
@@ -30,11 +34,14 @@
 {
     color: blueviolet;
 }
+.lightgray-background
+{
+    background: lightgray;
+}
 .text-underline {
     display: block;
     width: 9rem;
     height: .1rem;
-    background: lightgray;
     margin: .5rem auto;
 }
 button{
@@ -51,6 +58,10 @@ button{
     -ms-flex: 0 0 16.66%;
     flex: 0 0 16.66%;
     max-width: 16.66%;
+}
+.boxing-element
+{
+    padding: .5rem .5rem .5rem .5rem !important;
 }
 }
 
