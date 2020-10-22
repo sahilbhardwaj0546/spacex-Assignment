@@ -20,6 +20,10 @@ Importants points regarding development
 used land_success for successful landing 
 used launch_success for successful launch
 used launch_year for launching year
+
+if from api we are getting land_success as null then on UI on value is 
+Accepted as we are having check for boolean values.
+
 6.) Used images from links.mission_patch key.
 7.) The content will be centered align with a max width of 1440==>> I was not very clear with this requirement i have implemented what i understood that is having one col with all data center aligned with a max-width of 1440px.
 8.) Added message to user when no match is made.
