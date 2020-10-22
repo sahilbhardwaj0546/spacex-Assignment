@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="row no-margin">
-    <aside class="col-12 col-lg-2 col-md-4 no-padding">
+    <aside class="col-12 col-md-4 no-padding custom-col-2-above-1024">
         <div class="filters-container white-background">
             <div>
                 <h4 class="text-padding"><b>Filters</b></h4>
@@ -41,12 +41,11 @@
             </div>
         </div>
     </aside>
-    <div class="col-lg-10 col-12 col-md-8 no-padding">
+    <div class=" col-12 col-md-8 no-padding custom-col-10-above-1024 text-center-align-above-1440 max-width-1440">
         <div class="row mission-container">
             <ng-container *ngIf="spacexRawData.length">
             <ng-container *ngFor="let spacexData of spacexRawData" >
-            <div class="col-xxl-2 no-padding"></div>
-            <div class="col-lg-3 col-12 col-md-6 col-xxl-8 no-padding mission-container-child" [ngClass]="{
+            <div class=" col-12 col-md-6 col-xl-12 no-padding mission-container-child custom-col-3-above-1024" [ngClass]="{
                 'no-padding': this.screenResolution<576 }">
                 <div class="white-background col-12 boxing-element">
                     <div class="lightgray-background">
@@ -79,7 +78,6 @@
                 </div>
                 </div>
             </div>
-            <div class="col-xxl-2 no-padding"></div>
         </ng-container>
     </ng-container>
         <ng-container *ngIf="!spacexRawData.length">
