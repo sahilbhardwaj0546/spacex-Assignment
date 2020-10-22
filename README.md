@@ -38,33 +38,3 @@ Hence resucing LOC and complexity and enhancing productivity/performance of our 
 
 
 
-
-
-
-
-
-
-
-Directed=>
-⦁	Mobile View: Page should have only one Column until 700 px. We have provided the Visual designs for Mobile screen.
-⦁	Tablet View: Page should have 2 columns between 700 and 1024 px. Design is provided for Desktop tile and that should be followed for this viewport.
-⦁	Desktop View: Page should have 4 columns between 1024 and 1440 px. Beyond 1440px viewport,  the content will be centered align with a max width of 1440.
-
-Instead of upper approach used w3 defined resolution standards
-
-Mobile view => Upto 767px
-tab view => 768px to 1199px
-Desktop View =>1200px to 1439px
-Extra Large Desktop => Custom designed grid(col-xxl-2,col-xxl-8) for >=1400px 
-
-We can also design Directed design with custom defined breakpoints in same manner as defined breakpoints for col-xxl 
-
-
-
-
-
-
-
-
-
-
